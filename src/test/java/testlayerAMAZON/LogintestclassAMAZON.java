@@ -73,18 +73,39 @@ public Object[][] Details(){
 		log.clickcontinuebt();
 		log.typepassword(prop.getProperty("password"));
 		log.signInSubmit();
+		Thread.sleep(500);		
+		//Clicking on Deals Tab Amazon.ca
+		log.deals();
+		Thread.sleep(1500);
+		//Clicking on Product Category Tile for Products Amazon.ca	
+		log.category();
+		Thread.sleep(500);	
+		//Clicking on FirstProduct of Selected Category Amazon.ca	
+		log.product();
+		Thread.sleep(500);
+		//Clicking on No Thanks Pop-up to go Add to Cart for Selected product Amazon.ca			
+		log.cart();
+		Thread.sleep(500);
+		//Clicking on Add to Cart for Selected product Amazon.ca
+		log.nothanks();
+		Thread.sleep(500);
+		//Clicking on ProceedToRetailCheckout Amazon.ca
+		log.checkout();
+		Thread.sleep(500);		
+		//Clicking on ship to selected address Amazon.ca
+		log.shipto();
+		Thread.sleep(500);	
+		//Your Account on Amazon.ca		
+		log.AccountsLists();			
+		Thread.sleep(3000);		
+		//Your Orders on Amazon.ca
+		log.YourOrder();			
 		Thread.sleep(3000);
-	//Your Account on Amazon.ca		
-			log.AccountsLists();			
-			Thread.sleep(3000);		
-	//Your Orders on Amazon.ca
-			log.YourOrder();			
-			Thread.sleep(3000);	
-
 	}
 		
-  @AfterMethod public void close() throws InterruptedException {
-  Thread.sleep(3000); driver.close(); }
-		 
+  @AfterMethod 
+  public void close() throws InterruptedException {
+	  Thread.sleep(3000); driver.close(); 
+  }		 
 		 
 }
